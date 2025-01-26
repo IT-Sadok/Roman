@@ -1,237 +1,237 @@
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
-  /*
-  Resetting padding, margin, and setting box-sizing to border-box for all elements.
-  This ensures consistent styling across browsers.
-  */
-  *,
-  ::before,
-  ::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  /*
-  Root variables for colors, gradients, and common values.
-  These variables help manage consistency and allow easy updates.
-  */
-  :root {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
+/*
+Resetting padding, margin, and setting box-sizing to border-box for all elements.
+This ensures consistent styling across browsers.
+*/
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*
+Root variables for colors, gradients, and common values.
+These variables help manage consistency and allow easy updates.
+*/
+:root {
 
-    --main-gradient: linear-gradient(to right, #F9FAFB, #D2D6DB);
-    --primary-color: rgba(67, 56, 202, 1);
-    --primary-hover-color: #3730A3;
-    --secondary-bg: #fff;
-    --secondary-border: rgba(229, 229, 229, 1);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --focus-shadow: #444CE71F;
-    --text-color: #525252;
-    --text-hover-color: #171717;
-  }
-  /*
-  Setting the font family for the entire HTML document.
-  "Noto Sans" is the primary font.
-  */
-  html {
-    font-family: "Noto Sans", sans-serif;
-    width: 100%;
-    max-width: 100%;
-  }
+  --main-gradient: linear-gradient(to right, #F9FAFB, #D2D6DB);
+  --primary-color: rgba(67, 56, 202, 1);
+  --primary-hover-color: #3730A3;
+  --secondary-bg: #fff;
+  --secondary-border: rgba(229, 229, 229, 1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --focus-shadow: #444CE71F;
+  --text-color: #525252;
+  --text-hover-color: #171717;
+}
+/*
+Setting the font family for the entire HTML document.
+"Noto Sans" is the primary font.
+*/
+html {
+  font-family: "Noto Sans", sans-serif;
+  width: 100%;
+  max-width: 100%;
+}
 
-  /*
-  Removing default margins and paddings from the body.
-  */
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  /*
-  Header background is styled with the gradient defined in the root variables.
-  */
-  header {
-    background-color: transparent;
-    margin: 0 auto;
-    background: var(--main-gradient);
-    width: 100%;
-  }
-  /*
-  Styling the navigation bar with center alignment and padding.
-  Flexbox is used for horizontal layout.
-  */
-  /* Prevent nav from overflowing horizontally */
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5.25rem;
-    width: 100%;
-    background: var(--main-gradient);
-    box-sizing: border-box;
-  }
+/*
+Removing default margins and paddings from the body.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/*
+Header background is styled with the gradient defined in the root variables.
+*/
+header {
+  background-color: transparent;
+  margin: 0 auto;
+  background: var(--main-gradient);
+  width: 100%;
+}
+/*
+Styling the navigation bar with center alignment and padding.
+Flexbox is used for horizontal layout.
+*/
+/* Prevent nav from overflowing horizontally */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.25rem;
+  width: 100%;
+  background: var(--main-gradient);
+  box-sizing: border-box;
+}
 
-  /* Adjust the nav-wrap width and centering */
-  .nav-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
+/* Adjust the nav-wrap width and centering */
+.nav-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
-  /* Ensure the logo remains aligned */
-  .logo {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-  }
-  /*
-  Navigation links styled as a horizontal list without bullets.
-  */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.4rem 5rem;
-    gap: 2.25rem;
-    border-radius: 0.25rem;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-    padding: 2px;
-    border-radius: 0.25rem;
-  }
-  /*
-  Hover state for links - changing text color.
-  */
-  .nav-links a:hover {
-    color: var(--text-hover-color);
-  }
-  /*
-  Focus state for links - adding a shadow for accessibility.
-  */
-  .nav-links a:focus {
-    box-shadow: 0 0 0 0.25rem var(--focus-shadow);
-  }
-  /*
-  Container for navigation buttons aligned horizontally.
-  */
-  .nav-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  /*
-  Common styles for all buttons, including alignment and spacing.
-  */
-  .btn {
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.35rem;
-    width: 7.65rem;
-    height: 2.75rem ;
-  }
-  /*
-  Secondary button styles - white background with subtle borders and shadow.
-  */
-  .secondary-normal-button {
-    background-color: var(--secondary-bg);
-    border: 1px solid var(--secondary-border);
-    box-shadow: 0 1px 3px 0 var(--shadow-color);
-    color: var(--text-hover-color);
-    width: 7.8rem;
-    height: 2.75rem;
-  }
-  /*
-  Hover and focus states for the secondary button.
-  */
-  .secondary-normal-button:hover {
-    background-color: #FAFAFA;
-  }
-  .secondary-normal-button:focus {
-    box-shadow: 0 0 0 4px var(--focus-shadow);
-    background-color: #FAFAFA;
-  }
-  /*
-  Primary button styles - blue background with white text.
-  */
-  .primary-normal-button {
-    background: rgba(67, 56, 202, 1);
-    color: white;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  }
-  /*
-  Hover and focus states for the primary button.
-  */
-  .primary-normal-button:hover {
-    background-color: var(--primary-hover-color);
-  }
+/* Ensure the logo remains aligned */
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+/*
+Navigation links styled as a horizontal list without bullets.
+*/
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 5rem;
+  gap: 2.25rem;
+  border-radius: 0.25rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  padding: 2px;
+  border-radius: 0.25rem;
+}
+/*
+Hover state for links - changing text color.
+*/
+.nav-links a:hover {
+  color: var(--text-hover-color);
+}
+/*
+Focus state for links - adding a shadow for accessibility.
+*/
+.nav-links a:focus {
+  box-shadow: 0 0 0 0.25rem var(--focus-shadow);
+}
+/*
+Container for navigation buttons aligned horizontally.
+*/
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+/*
+Common styles for all buttons, including alignment and spacing.
+*/
+.btn {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.35rem;
+  width: 7.65rem;
+  height: 2.75rem ;
+}
+/*
+Secondary button styles - white background with subtle borders and shadow.
+*/
+.secondary-normal-button {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--secondary-border);
+  box-shadow: 0 1px 3px 0 var(--shadow-color);
+  color: var(--text-hover-color);
+  width: 7.8rem;
+  height: 2.75rem;
+}
+/*
+Hover and focus states for the secondary button.
+*/
+.secondary-normal-button:hover {
+  background-color: #FAFAFA;
+}
+.secondary-normal-button:focus {
+  box-shadow: 0 0 0 4px var(--focus-shadow);
+  background-color: #FAFAFA;
+}
+/*
+Primary button styles - blue background with white text.
+*/
+.primary-normal-button {
+  background: rgba(67, 56, 202, 1);
+  color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+/*
+Hover and focus states for the primary button.
+*/
+.primary-normal-button:hover {
+  background-color: var(--primary-hover-color);
+}
 
-  .primary-normal-button:focus {
-    background-color: var(--primary-hover-color);
-    box-shadow: 0 0 0 4px var(--focus-shadow);
-  }
-  /*
-  Background styling for the content wrapper.
-  */
-  .content-wrapper {
-    background: var(--main-gradient);
-  }
+.primary-normal-button:focus {
+  background-color: var(--primary-hover-color);
+  box-shadow: 0 0 0 4px var(--focus-shadow);
+}
+/*
+Background styling for the content wrapper.
+*/
+.content-wrapper {
+  background: var(--main-gradient);
+}
+.burger-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+/* Responsive changes for mobile view */
+@media (max-width: 1044px) {
   .burger-menu {
+    display: block;
+  }
+
+  .nav-wrap {
+    justify-content: space-between;
+  }
+
+  .nav-links, .nav-buttons {
     display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-color);
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  /* Responsive changes for mobile view */
-  @media (max-width: 1044px) {
-    .burger-menu {
-      display: block;
-    }
+}
 
-    .nav-wrap {
-      justify-content: space-between;
-    }
-
-    .nav-links, .nav-buttons {
-      display: none;
-    }
-
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      padding: 1rem;
-      gap: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+/* For desktop view */
+@media (min-width: 1045px) {
+  .burger-menu {
+    display: none; /* Hides burger menu on desktops */
   }
 
-  /* For desktop view */
-  @media (min-width: 1045px) {
-    .burger-menu {
-      display: none; /* Hides burger menu on desktops */
-    }
-
-    .nav-links {
-      display: flex; /* Displays the horizontal navigation links */
-    }
+  .nav-links {
+    display: flex; /* Displays the horizontal navigation links */
   }
+}
