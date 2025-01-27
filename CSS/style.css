@@ -67,7 +67,10 @@ nav {
   background: var(--main-gradient);
   box-sizing: border-box;
 }
-
+.logo-and-btn {
+  display: flex;
+  justify-content: space-between;
+}
 /* Adjust the nav-wrap width and centering */
 .nav-wrap {
   position: relative;
